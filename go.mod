@@ -1,4 +1,4 @@
-module github.com/fxamacker/cbor/v2
+module github.com/tinygo-pkg/cbor
 
 go 1.17 // Compiling with go 1.20+ uses new features and optimizations
 
