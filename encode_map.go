@@ -30,8 +30,8 @@ func (me *mapKeyValueEncodeFunc) encodeKeyValues(e *encoderBuffer, em *encMode, 
 	iter := v.MapRange()
 	for i := 0; iter.Next(); i++ {
 		off := e.Len()
-		iterk.SetIterKey(iter)
-		iterv.SetIterValue(iter)
+		iterk.Set(iter.Key())
+		iterv.Set(iter.Value())
 
 		if err := me.kf(e, em, *iterk); err != nil {
 			return err
